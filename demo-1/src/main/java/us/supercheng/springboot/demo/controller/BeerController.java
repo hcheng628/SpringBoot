@@ -12,6 +12,6 @@ public class BeerController {
 
     @RequestMapping(value = "/bestbeer", method = RequestMethod.GET)
     public Beer bestBeer() {
-        return new Beer("PERONI", 6.3, 234.4, "Itlay", new Date());
+        return new Beer("PERONI", 8.1, 234.4, "Itlay", new Date());
     }
 }
