@@ -22,7 +22,9 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<fastjson.version>1.2.40</fastjson.version>
-		<springdevtool.version>1.5.8.RELEASE</springdevtool.version>
+		<mysql.driver.version>5.1.43</mysql.driver.version>
+		<springboot.version>1.5.8.RELEASE</springboot.version>
+
 	</properties>
 
 	<dependencies>
@@ -31,11 +33,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<dependency>
+		<!--dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>mssql-jdbc</artifactId>
 			<scope>runtime</scope>
-		</dependency>
+		</dependency-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -56,10 +58,25 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
-			<version>${springdevtool.version}</version>
+			<version>${springboot.version}</version>
 			<optional>true</optional>
 			<scope>runtime</scope>
 		</dependency>
+
+		<!-- DB Related -->
+		<!-- MySQL Driver -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.driver.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+
 
 	</dependencies>
 	<build>
