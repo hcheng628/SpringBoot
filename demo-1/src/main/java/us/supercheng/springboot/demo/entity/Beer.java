@@ -20,6 +20,9 @@ public class Beer {
     @JSONField(format="yyyy-MM-dd HH:mm:SS")
     Date since;
 
+    public Beer() {
+        super();
+    }
     public Beer(String name, Double alcoholPercentage, Double calories, String origin, Date since) {
         this.name = name;
         this.alcoholPercentage = alcoholPercentage;
