@@ -40,7 +40,23 @@ public class BeerService {
 
 
     // DAO Version
+    public Beer saveDaoVersion(Beer beer) {
+        return this.beerDao.save(beer);
+    }
+
     public Beer findOneDaoVersion(String id) {
         return this.beerDao.getABeer(id);
+    }
+
+    public Beer updateDaoVersion(Beer beer) {
+        return this.beerDao.updateBeer(beer);
+    }
+
+    public Beer deleteDaoVersion(String id) {
+        return this.beerDao.deleteBeer(id);
+    }
+
+    public List<Beer> getAllBeerDaoVersion() {
+        return this.beerDao.getAllBeer();
     }
 }
