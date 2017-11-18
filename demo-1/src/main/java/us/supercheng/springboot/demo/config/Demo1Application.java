@@ -35,7 +35,7 @@ public class Demo1Application extends WebMvcConfigurerAdapter {
 	public SimpleMappingExceptionResolver simpleMappingExceptionResolver() {
 		SimpleMappingExceptionResolver resolver = new SimpleMappingExceptionResolver();
 		Properties prop = new Properties();
-		prop.setProperty("java.lang.Exception","error");
+		prop.setProperty("java.lang.Exception","jsp/error");
 		resolver.setExceptionMappings(prop);
 		return resolver;
 	}

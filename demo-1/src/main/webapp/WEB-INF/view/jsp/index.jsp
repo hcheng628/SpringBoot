@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Error Page</title>
+    <title>JSP Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -15,8 +15,14 @@
 <div class="row">
     <div class="col-md-8">
         <div class="container">
-            <h3>Landing Page</h3>
-            This is App Landing Page
+            <h3>Spring Boot Views:</h3>
+            <div class="well">
+                <a href="jsp" class="btn btn-primary">JSP View</a>
+                <br>
+                <a href="thymeleaf" class="btn btn-info">Thymeleaf</a>
+                <br>
+                <a href="freemarker" class="btn btn-success">Freemarker</a>
+            </div>
         </div>
     </div>
 </div>
