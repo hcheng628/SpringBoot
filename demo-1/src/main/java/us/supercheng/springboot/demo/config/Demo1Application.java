@@ -1,6 +1,7 @@
 package us.supercheng.springboot.demo.config;
 
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -11,13 +12,13 @@ import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
 @SpringBootApplication
 @ComponentScan("us.supercheng.springboot.demo")
+@MapperScan("us.supercheng.springboot.demo.dbmapper")
 @EnableJpaRepositories(basePackages="us.supercheng.springboot.demo.repository")
 @EntityScan("us.supercheng.springboot.demo.entity")
 public class Demo1Application extends WebMvcConfigurerAdapter {

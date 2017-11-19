@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import us.supercheng.springboot.demo.entity.Beer;
 import us.supercheng.springboot.demo.service.BeerService;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;

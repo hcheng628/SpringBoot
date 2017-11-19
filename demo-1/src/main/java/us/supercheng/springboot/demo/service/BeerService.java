@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import us.supercheng.springboot.demo.dao.BeerDao;
+import us.supercheng.springboot.demo.dbmapper.BeerMapper;
 import us.supercheng.springboot.demo.entity.Beer;
 import us.supercheng.springboot.demo.repository.BeerRepository;
 
@@ -17,6 +18,8 @@ public class BeerService {
     private BeerRepository beerRepository;
     @Autowired
     private BeerDao beerDao;
+    @Autowired
+    private BeerMapper beerMapper;
 
     // Create + Update
     @Transactional
@@ -59,4 +62,15 @@ public class BeerService {
     public List<Beer> getAllBeerDaoVersion() {
         return this.beerDao.getAllBeer();
     }
+
+    // Mybatis DB Mapper Version
+
+    public Beer findOneMapperVersion(String id) {
+        return this.beerMapper.getBeerById(id);
+    }
+
+    public List<Beer> getAllBeerMapperVersion() {
+        return this.beerMapper.getAllBeer();
+    }
+
 }
