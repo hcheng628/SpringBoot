@@ -1,6 +1,7 @@
 package us.supercheng.springboot.demo.config;
 
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
+import com.github.pagehelper.PageHelper;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,7 +19,7 @@ import java.util.Properties;
 
 @SpringBootApplication
 @ComponentScan("us.supercheng.springboot.demo")
-@MapperScan("us.supercheng.springboot.demo.dbmapper")
+@MapperScan("us.supercheng.springboot.demo.*")
 @EnableJpaRepositories(basePackages="us.supercheng.springboot.demo.repository")
 @EntityScan("us.supercheng.springboot.demo.entity")
 public class Demo1Application extends WebMvcConfigurerAdapter {
@@ -40,6 +41,20 @@ public class Demo1Application extends WebMvcConfigurerAdapter {
 		resolver.setExceptionMappings(prop);
 		return resolver;
 	}
+
+//	@Bean
+//	public PageHelper pageHelper() {
+//		System.out.println("init MyBatisConfiguration.pageHelper() start");
+//		PageHelper pageHelper = new PageHelper();
+//		Properties p = new Properties();
+//		p.setProperty("offsetAsPageNum", "true");
+//		p.setProperty("rowBoundsWithCount", "true");
+//		p.setProperty("reasonable", "true");
+//		pageHelper.setProperties(p);
+//		System.out.println("init MyBatisConfiguration.pageHelper() complete");
+//		return pageHelper;
+//	}
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(Demo1Application.class, args);

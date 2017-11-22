@@ -1,5 +1,6 @@
 package us.supercheng.springboot.demo.service;
 
+import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -65,11 +66,21 @@ public class BeerService {
 
     // Mybatis DB Mapper Version
 
+    public Beer saveMapperVersion(Beer newBeer) {
+        this.beerMapper.saveBeer(newBeer);
+        return newBeer;
+    }
+
     public Beer findOneMapperVersion(String id) {
         return this.beerMapper.getBeerById(id);
     }
 
     public List<Beer> getAllBeerMapperVersion() {
+        return this.beerMapper.getAllBeer();
+    }
+
+    public List<Beer> getBeersWithPageAndCountMapperVersion(int pageNum, int count) {
+        PageHelper.startPage(pageNum, count);
         return this.beerMapper.getAllBeer();
     }
 
