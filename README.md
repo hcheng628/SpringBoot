@@ -42,7 +42,9 @@
     Here are the Demos: 
       i. Spring JPA Hibernate: Basic CRUD (Repository Approach)
       ii. Spring JdbcTemplate: Same CRUD (DAO Approach)
-      iii. Mybatis: Same Operations
+      iii. Mybatis: Same CRUD (SQL Approach)
+           - PageHelper
+           - Retrieve AutoGenKeys
       
       
    # 5. Global Exception Handler
